@@ -17,8 +17,8 @@ from pathlib import Path
 # DatabaseWrapper.data_types['DateTimeField']='datetime'
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
-
+# BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -140,10 +140,13 @@ USE_TZ = True
 
 ROOT_PATH = os.path.dirname(__file__)
 
-STATIC_ROOT = os.path.join(ROOT_PATH, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [os.path.join(ROOT_PATH, 'static')]
+
+os.makedirs(STATIC_ROOT, exist_ok=True)
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

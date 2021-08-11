@@ -94,12 +94,15 @@ WSGI_APPLICATION = 'BsaleAPIProject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-import dj_database_url
-from decouple import config
 DATABASES = {
-    'default': dj_database_url.config(
-        default=config('DATABASE_URL')
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd38fqntqdlr90o',
+        'USER': 'bdczgwrpdxhnzh',
+        'PASSWORD': '542c8d5d9778459bd3173f9ded63c02baeda1a6b86c9b60131bbabb67795cdee',
+        'HOST': 'ec2-34-204-128-77.compute-1.amazonaws.com',
+        'PORT': '5432',
+    }
 }
 
 # Password validation

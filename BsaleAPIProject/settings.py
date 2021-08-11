@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-4pyb%@s3nr@sposn%q&%j^ycxf%)&a2x)$7pu@&^m9n58h$36o
 DEBUG = False
 
 
-ALLOWED_HOSTS=  ['http://localhost:5000', '127.0.0.1', '*']
+ALLOWED_HOSTS=  ['*']
 
 
 CORS_ORIGIN_ALLOW_ALL = True
@@ -147,6 +147,7 @@ STATIC_URL = '/static/'
 os.makedirs(STATIC_ROOT, exist_ok=True)
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATICFILES_STORAGE='whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

@@ -1,1 +1,1 @@
-web: gunicorn BsaliAPIProject.wsgi --log-file -
+web: gunicorn BsaleAPIProject.wsgi --log-file -

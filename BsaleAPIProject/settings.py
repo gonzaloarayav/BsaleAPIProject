@@ -94,14 +94,14 @@ WSGI_APPLICATION = 'BsaleAPIProject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-import dj_database_url
-from decouple import config
-
 DATABASES = {
-    'default': { dj_database_url.config(
-        default=config('DATABASE_URL')
-    )
-        
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'bsale_test',
+        'USER': 'bsale_test',
+        'PASSWORD': 'bsale_test',
+        'HOST': 'mdb-test.c6vunyturrl6.us-west-1.rds.amazonaws.com',
+        'PORT': '',
     }
 }
 

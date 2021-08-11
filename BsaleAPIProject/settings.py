@@ -96,7 +96,7 @@ WSGI_APPLICATION = 'BsaleAPIProject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'bsale_test',
         'USER': 'bsale_test',
         'PASSWORD': 'bsale_test',

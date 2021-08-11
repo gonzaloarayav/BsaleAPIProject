@@ -96,12 +96,12 @@ WSGI_APPLICATION = 'BsaleAPIProject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd4c3uh3lh24a4',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'bsale_test',
         'USER': 'bsale_test',
-        'PASSWORD': 'bfb836e38e9d60d6159f8bee11f83bac0710222c3ab0b950277e8a292b56ffb8',
-        'HOST': 'ec2-44-196-44-90.compute-1.amazonaws.com',
-        'PORT': '5432',
+        'PASSWORD': 'bsale_test',
+        'HOST': 'mdb-test.c6vunyturrl6.us-west-1.rds.amazonaws.com',
+        'PORT': '',
     }
 }
 
